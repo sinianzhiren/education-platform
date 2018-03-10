@@ -1,0 +1,1105 @@
+
+//公共样式部分
+@mixin ico(){
+  left: 9px;
+  bottom: 8px;
+}
+@mixin padding($fff: #eee,$top: 7px,$left: 20px,$color: #999){
+  background-color: $fff;
+  padding: $top $left;
+  color: $color;
+}
+@mixin com_text() {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 280px;
+  top: 51px;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.com{
+  //background-color: #cccccc;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+.com:hover .com_more{
+  color: #35b558;
+}
+@mixin font($size: 12px,$weight: normal){
+  font-family: "微软雅黑","宋体","楷体";
+  font-size: $size;
+  font-weight: $weight;
+}
+$float: left;
+$floatRight: right;
+$fff: #fff;
+$color: #35b558;
+@mixin bg($position,$width,$height){
+  position: $position;
+  width: $width;
+  height: $height;
+}
+html,body,.container{
+  background: #f5f5f5;
+  width: 100%;
+}
+header{
+  background: $fff;
+  height: 60px;
+}
+.logo{
+  position: relative;
+  float: $float;
+  width: 109px;
+  height: 40px;
+  overflow: hidden;
+  i{
+    @include bg(absolute,109px,40px);
+    background: url("../img/logo.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+nav{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+nav .leftUl{
+  float: $float;
+  text-align: center;
+  li{
+    float: $float;
+    @include font(15px,normal);
+    cursor: pointer;
+    margin-left: 50px;
+    height: 60px;
+    padding: 10px 0;
+    position: relative;
+    &:hover .triangle{
+      transition: all 1s linear;
+      transform: rotate(495deg);
+      border-color: #35b558;
+    }
+    &:hover .nav_title{
+      color: #35b558;
+      border-color: #35b558;
+    }
+    &:hover .down_text{
+      display: block;
+      opacity: 1;
+      transition: all 0.5s linear;
+    }
+    &:hover .down_course{
+      display: block;
+      opacity: 1;
+      transition: all 0.5s linear;
+    }
+    .triangle{
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: -14px;
+      top: 13px;
+      background: transparent;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 1px solid #999;
+      border-left: 1px solid #999;
+      transform: rotate(-45deg);
+    }
+    .down_text{
+      @include com_text;
+      .paddingLeft {
+        @include padding(#fff, 0px, 37px, #555);
+        @include font(13px, normal);
+        margin-bottom: 15px;
+        margin-top: 10px;
+          }
+      }
+    .down_course{
+      @include com_text;
+      opacity: 0;
+      display: none;
+      span{
+        float: right;
+      }
+    }
+    .web_school{
+       @include padding;
+     }
+    .back_school{
+      @include padding;
+    }
+    .paddingLeft:hover{
+      color: #35b558;
+    }
+      p{
+        &:hover{
+          background-color: #eee;
+        }
+        @include font(12px,normal);
+        position: relative;
+        padding-top: 10px;
+        text-align: left;
+        &:nth-child(7){
+          @include padding;
+        }
+         .icon1{
+            @include bg(absolute,14px,14px);
+            left: 9px;
+            background: url("../img/allicon.png") no-repeat;
+            background-position: -15px -27px;
+            background-size: 64px 64px;
+          }
+          .icon2{
+            @include bg(absolute,14px,14px);
+            left: 9px;
+            background: url("../img/allicon3.png") no-repeat;
+            background-position: -2px -60px;
+            background-size: 16px 148px;
+          }
+        .icon3{
+          @include bg(absolute,14px,14px);
+          left: 9px;
+          background: url("../img/allicon3.png") no-repeat;
+          background-position: -2px -2px;
+          background-size: 16px 148px;
+        }
+        .icon4{
+          @include bg(absolute,14px,14px);
+          left: 9px;
+          background: url("../img/allicon3.png") no-repeat;
+          background-position: -2px -38px;
+          background-size: 16px 148px;
+        }
+        .icon5{
+          @include bg(absolute,14px,14px);
+          left: 9px;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -45px -14px;
+          background-size: 64px 64px;
+        }
+        .icon6{
+          @include bg(absolute,14px,14px);
+          left: 9px;
+          background: url("../img/allicon3.png") no-repeat;
+          background-position: -2px -82px;
+          background-size: 16px 148px;
+        }
+        .ico1{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: 0px -13px;
+          background-size: 64px 64px;
+        }
+        .ico2{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -45px 0px;
+          background-size: 64px 64px;
+        }
+        .ico3{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -30px -13px;
+          background-size: 64px 64px;
+        }
+        .ico4{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -15px -13px;
+          background-size: 64px 64px;
+        }
+        .ico5{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -16px -0px;
+          background-size: 64px 64px;
+        }
+        .ico6{
+          @include bg(absolute,14px,14px);
+          @include ico;
+          background: url("../img/allicon.png") no-repeat;
+          background-position: -30px -13px;
+          background-size: 64px 64px;
+        }
+      }
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+//}
+nav .rightUl{
+  overflow: hidden;
+  float: right;
+  text-align: center;
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin-top: -10px;
+  div{
+    float: $float;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+      &:nth-child(1){
+        margin-left: 80px;
+        span{
+          @include bg(absolute,17px,17px);
+          background: url("../img/search.png") no-repeat;
+          background-size: 100%;
+          &:hover{
+            background: url("../img/search-icon2.png") no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-child(2){
+        margin-left: 44px;
+        span{
+          @include bg(absolute,18px,17px);
+          background: url("../img/app-icon.png") no-repeat;
+          background-size: 100%;
+          &:hover{
+            background: url("../img/app-icon2.png") no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-child(3){
+        margin-left: 45px;
+        span{
+          @include bg(absolute,16px,17px);
+          background: url("../img/login-icon.png") no-repeat;
+          background-size: 100%;
+          &:hover{
+
+          }
+        }
+      }
+  }
+}
+//轮播图部分
+.content{
+  height: 100%;
+  padding-top: 20px;
+  width: 1000px;
+  margin: 0 auto;
+}
+.slidePhotos{
+  height: 330px;
+}
+.slide{
+  width: 750px;
+  height: 330px;
+  overflow: hidden;
+  float: $float;
+  position: relative;
+  &:hover .slideLeft_control{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+  }
+  &:hover .slideRight_control{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+  }
+  ul{
+  &:nth-child(1){
+    position: relative;
+    width: 3750px;
+    li{
+      float: $float;
+    }
+  }
+  &:nth-child(2){
+    position: absolute;
+    left: 50%;
+    width: 80px;
+    bottom: 10px;
+    margin-left: -40px;
+    li{
+     display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: $fff;
+      margin-left: 3px;
+      cursor: pointer;
+    }
+    .styleLi{
+      width: 10px;
+      height: 18px;
+      background-color: $color;
+    }
+    }
+  }
+  .slideLeft_control{
+    opacity: 0;
+    @include bg(absolute,50px,80px);
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+    background: url("../img/ad-left.png") no-repeat;
+    background-size: 50px 80px;
+    &:hover{
+      background: url("../img/ad-left1.png") no-repeat;
+      background-size: 50px 80px;
+    }
+  }
+  .slideRight_control{
+    opacity: 0;
+    @include bg(absolute,50px,80px);
+    right: 0;
+    top: 50%;
+    margin-top: -40px;
+    background: url("../img/ad-left.png") no-repeat;
+    background-size: 50px 80px;
+    transform: rotate(180deg);
+    &:hover{
+      background: url("../img/ad-left2.png") no-repeat;
+      background-size: 50px 80px;
+     transform: rotate(0deg);
+    }
+  }
+
+}
+.slideRightContent{
+  float: $float;
+  width: 238px;
+  height: 160px;
+  background: $fff;
+  border: 1px solid #e9e9e9;
+  margin-left: 10px;
+  .top{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 24px;
+    height: 60px;
+    div {
+      float: $float;
+      i {
+        @include bg(absolute, 57px, 57px);
+        background: url("../img/headpic.jpg") no-repeat;
+        background-size: 57px 57px;
+      }
+      span{
+        @include font(12px,normal);
+      }
+    }
+  }
+  .bottom{
+    margin-top: 19px;
+    padding-left: 15px;
+    a{
+      text-decoration: none;
+      display: inline-block;
+      width: 70px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      padding: 3px 10px;
+      border: 1px solid $color;
+      margin-left: 5px;
+      &:hover{
+        background: $color;
+      }
+      &:hover span{
+        color: $fff;
+      }
+      span{
+        color: $color;
+        @include font(14px,normal);
+      }
+    }
+  }
+}
+//线上就业班开始
+.online_employment{
+  margin-top: 10px;
+  h2{
+
+  }
+  .employment{
+    margin-top: 10px;
+    div{
+      cursor: pointer;
+      &:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        transition: box-shadow 0.5s linear;
+      }
+      &:nth-child(1){
+        padding-right: 30px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        @include bg(relative,370px,75px);
+        background: url("../img/web.png") no-repeat;
+        background-size: 100%;
+        transition: box-shadow 0.5s linear;
+        p{
+          @include font(15px,normal);
+          color: $fff;
+          text-align: right;
+          line-height: 75px;
+        }
+      }
+      &:nth-child(2){
+        margin-bottom: 5px;
+        padding-right: 30px;
+        display: inline-block;
+        @include bg(relative,370px,75px);
+        background: url("../img/php.png") no-repeat;
+        background-size: 100%;
+        transition: box-shadow 0.5s linear;
+        p{
+          @include font(15px,normal);
+          color: $fff;
+          text-align: right;
+          line-height: 75px;
+        }
+      }
+      &:nth-child(3){
+        padding-right: 30px;
+        margin-top: 5px;
+        margin-right: 5px;
+        display: inline-block;
+        @include bg(relative,370px,75px);
+        background: url("../img/java.png") no-repeat;
+        background-size: 100%;
+        transition: box-shadow 0.5s linear;
+        p{
+          @include font(15px,normal);
+          color: $fff;
+          text-align: right;
+          line-height: 75px;
+        }
+      }
+      &:nth-child(4){
+        padding-right: 30px;
+        margin-top: 5px;
+        display: inline-block;
+        @include bg(relative,370px,75px);
+        background: url("../img/ui.png") no-repeat;
+        background-size: 100%;
+        transition: box-shadow 0.5s linear;
+        p{
+          @include font(15px,normal);
+          color: $fff;
+          text-align: right;
+          line-height: 75px;
+        }
+      }
+    }
+  }
+}
+.professional_courses{
+  width: 1000px;
+  height: 300px;
+  margin: 20px auto 40px auto;
+  h2{
+    margin-top: 10px;
+  }
+  .courses{
+    margin-top: 10px;
+    a{
+      text-decoration: none;
+    div{
+        background-color: $fff;
+        height: 270px;
+        border: 1px solid #f0f0f0;
+        display: inline-block;
+      transition: box-shadow 0.5s linear;
+        &:hover{
+          box-shadow: 0 2px 6px #ccc;
+          transition: box-shadow 0.5s linear;
+        }
+        p {
+          margin: 0 0 10px;
+        }
+          .web{
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 18px;
+            margin-left: 20px;
+            color: #555;
+          }
+          .class{
+            font-size: 12px;
+            margin-top: 25px;
+            margin-left: 20px;
+            color: #555;
+          }
+          .true-price{
+            font-size: 18px;
+            color: #ff5c00;
+            margin-left: 11px;
+            display: inline-block;
+            margin-top: 9px;
+          }
+        .price{
+          color: #999;
+          @include font();
+          display: inline-block;
+          margin-left: -5px;
+          text-decoration: line-through;
+        }
+        .studynum{
+          @include font();
+          color: #999;
+          display: inline-block;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}
+//线下培训专区开始
+.offline_training{
+  margin-top: 20px;
+  min-height: 300px;
+  h2{
+    @include font(16px,normal);
+    margin-bottom: 20px;
+  }
+  .training{
+    cursor: pointer;
+    overflow: hidden;
+    float: left;
+    @include bg(relative,478px,278px);
+    background: url("../img/web1.png") no-repeat;
+    background-size: 100%;
+    h2{
+      @include font(37px,normal);
+      color: $fff;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 0;
+    }
+    p{
+      color: $fff;
+      &:nth-child(1){
+        padding-top: 5px;
+        padding-left: 10px;
+        @include font(14px,normal);
+      }
+      &:nth-child(2){
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+        @include font(37px,normal);
+      }
+    }
+    .rozol{
+       @include font(30px,normal);
+       text-align: center;
+       padding-top: 20px;
+     }
+    i{
+     @include bg(absolute,100%,100%);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color: #000;
+      transition: opacity 0.3s linear;
+    }
+    &:hover i{
+      transition: opacity 0.3s linear;
+      opacity: 0.3;
+    }
+  }
+  @mixin play(){
+    float: left;
+    position: relative;
+    width: 261px;
+    height: 139px;
+  }
+  .training_right{
+    div{
+      &:nth-child(1){
+        @include play;
+        background-color: #3390f3;
+        transition: background-color 0.3s linear;
+        p{
+          &:nth-child(1){
+            @include bg(absolute,30px,28px);
+            background: url("../img/web2.png") no-repeat;
+            background-size: 100%;
+            top: 25%;
+            left: 50%;
+            margin-left: -15px;
+          }
+          &:nth-child(2){
+            color: $fff;
+            position: relative;
+            top: 58%;
+            @include font(15px,normal);
+            text-align: center;
+          }
+        }
+        &:hover{
+          background-color: #0569d3;
+          transition: background-color 0.3s linear;
+        }
+      }
+      &:nth-child(2){
+        @include play;
+        background-color: #0276f1;
+        transition: background-color 0.3s linear;
+        p{
+          &:nth-child(2){
+            @include bg(absolute,31px,24px);
+            background: url("../img/web3.png") 0px -13px no-repeat;
+            background-size: cover;
+            top: 25%;
+            left: 50%;
+            margin-left: -15px;
+          }
+          &:nth-child(3){
+            color: $fff;
+            position: relative;
+            top: 58%;
+            @include font(15px,normal);
+            text-align: center;
+          }
+        }
+        &:hover{
+          background-color: #0569d3;
+          transition: background-color 0.3s linear;
+        }
+      }
+      &:nth-child(3){
+        @include play;
+        background-color: #0276f1;
+        transition: background-color 0.3s linear;
+        p{
+          &:nth-child(1){
+            @include bg(absolute,30px,28px);
+            background: url("../img/web2.png") no-repeat;
+            background-size: 100%;
+            top: 25%;
+            left: 50%;
+            margin-left: -15px;
+          }
+          &:nth-child(2){
+            color: $fff;
+            position: relative;
+            top: 58%;
+            @include font(15px,normal);
+            text-align: center;
+          }
+        }
+        &:hover{
+          background-color: #0569d3;
+          transition: background-color 0.3s linear;
+        }
+      }
+      &:nth-child(4){
+        @include play;
+        background-color: #3390f3;
+        transition: background-color 0.3s linear;
+        p{
+          &:nth-child(1){
+            @include bg(absolute,30px,28px);
+            background: url("../img/web2.png") no-repeat;
+            background-size: 100%;
+            top: 25%;
+            left: 50%;
+            margin-left: -15px;
+          }
+          &:nth-child(2){
+            color: $fff;
+            position: relative;
+            top: 58%;
+            @include font(15px,normal);
+            text-align: center;
+          }
+        }
+        &:hover{
+          transition: background-color 0.3s linear;
+          background-color: #0569d3;
+        }
+      }
+    }
+  }
+}
+//职业学院开始
+.vocational_College{
+  min-height: 300px;
+  margin-top: 35px;
+  h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  ul{
+    margin-bottom: 10px;
+    &:hover i{
+      opacity: 0.3;
+      transition: opacity 0.5s linear;
+    }
+    li{
+      float: left;
+      background: #ccc;
+      position: relative;
+      width: 500px;
+      height: 270px;
+      margin-left: 0;
+      a{
+        img{
+          width: 500px;
+          height: 270px;
+          cursor: pointer;
+        }
+        i{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0;
+          transition: opacity 0.5s linear;
+        }
+        span{
+          padding-top: 180px;
+          font-size: 20px;
+          background: url(../img/cweb.png) no-repeat center 70px;
+          background-size: 55px 84px;
+          position: absolute;
+          text-align: center;
+          top: 0;
+          left: 0;
+          width: 100%;
+          color: #ffffff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .work-teacher{
+    width: 490px;
+    height: 270px;
+    float: left;
+    margin-left: 10px;
+    div{
+      width: 240px;
+      height: 130px;
+      float: left;
+      position: relative;
+      &:hover i{
+        opacity: 0.3;
+        transition: opacity 0.5s linear;
+      }
+      i{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+      }
+      img{
+        width: 240px;
+        height: 130px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+//会员课程开始
+.vip_course{
+  min-height: 420px;
+  width: 1000px;
+  margin-bottom: 20px;
+  h2{
+    @include font(16px,normal);
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+  ul{
+    margin-bottom: 10px;
+    li {
+      transition: all 0.5s linear;
+      float: left;
+      width: 156px;
+      height: 150px;
+      border: 1px solid #e9e9e9;
+      background: #fff;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:hover{
+        box-shadow: 0 2px 2px #ccc;
+        transition: all 0.5s linear;
+      }
+      a{
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        img{
+          height: 55px;
+          vertical-align: middle;
+          margin-top: 25px;
+        }
+        p{
+          @include font(13px,normal);
+          margin-bottom: 10px;
+          color: #555;
+        }
+        span{
+          color: #35b558;
+          @include font(14px,normal);
+        }
+      }
+    }
+  }
+  .input-button{
+    text-align: center;
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    text-decoration: none;
+    &:hover{
+      background-color: #35b558;
+      color: $fff;
+    }
+  }
+}
+//
+.student_stories{
+  width: 1000px;
+  h2{
+    @include font(16px,normal);
+    margin-top: 20px;
+  }
+  .story-container{
+    height: 260px;
+    width: 100%;
+    margin-top: 34px;
+    overflow: hidden;
+    a{
+      text-decoration: none;
+    }
+    .storyone{
+      float: left;
+      width: 313px;
+      height: 260px;
+      >div{
+        height: 140px;
+        width: 311px;
+        border: 1px solid #e9e9e9;
+        background: $fff;
+        transition: all 0.5s linear;
+        &:hover{
+          box-shadow: 0 2px 4px #ccc;
+          transition: all 0.5s linear;
+        }
+        .from{
+          height: 100%;
+          overflow: hidden;
+          font-size: 12px;
+          color: #555;
+          line-height: 20px;
+          padding: 20px 25px;
+          text-align: left;
+        }
+      }
+      img{
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #e9e9e9;
+        vertical-align: middle;
+      }
+      .zhu{
+        display: block;
+        margin-left: 100px;
+        margin-top: -30px;
+        color: #555;
+        font-size: 13px;
+      }
+      span{
+        display: block;
+        margin-left: 100px;
+        margin-top: 6px;
+        color: #999;
+        font-size: 12px;
+      }
+    }
+  }
+}
+//底部
+@mixin com(){
+  float: left;
+  color: #808080;
+}
+.call{
+  @include com;
+}
+footer{
+  a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 12px;
+    &:hover{
+      color: $color;
+    }
+  }
+  dt{
+    margin-top: 10px;
+  }
+  min-width: 1000px;
+  border-top: 1px solid #e4e4e4;
+  background: #fff;
+  .footer-right{
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+    background: #999;
+  }
+  .footer-top{
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 34px;
+    box-sizing: border-box;
+    .jk-logo{
+      float: left;
+      position: absolute;
+      left: 0;
+      top: 25px;
+      display: inline-block;
+      width: 160px;
+      height: 75px;
+      img{
+        width: 109px;
+        height: 40px;
+        vertical-align: middle;
+        display: block;
+      }
+      p{
+        font-size: 12px;
+        color: #999;
+        margin-top: 20px;
+      }
+    }
+    .jike-down{
+      position: absolute;
+      right: 0;
+      top: 25px;
+      display: inline-block;
+      width: 175px;
+      text-align: left;
+      .down-ios{
+        margin-top: 18px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        width: 140px;
+        height: 27px;
+        border: 1px solid #eeeeee;
+        margin-bottom: 10px;
+        line-height: 30px;
+        color: #808080;
+        font-size: 13px;
+        cursor: pointer;
+        background: url(../img/icon-down-ios.png) no-repeat 0 0;
+        background-size: 30px 30px;
+        &:hover .iphone{
+          display: block;
+        }
+        .iphone{
+          display: none;
+          position: absolute;
+          background: #FFFFFF;
+          top: -158px;
+          left: 10px;
+          width: 120px;
+          box-shadow: 0 2px 1px #f9f9f9;
+        }
+      }
+      .down-android{
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        width: 140px;
+        height: 27px;
+        border: 1px solid #eeeeee;
+        margin-bottom: 10px;
+        line-height: 28px;
+        color: #808080;
+        font-size: 13px;
+        cursor: pointer;
+        background: url(../img/icon-down.png) no-repeat 0 0;
+        background-size: 30px 30px;
+        &:hover{
+          display: block;
+        }
+        .android{
+          display: none;
+          position: absolute;
+          background: #FFFFFF;
+          top: -165px;
+          left: 10px;
+          width: 120px;
+          box-shadow: 0 2px 1px #f9f9f9;
+        }
+      }
+    }
+  }
+  .footer-bottom{
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .footer-cert{
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
