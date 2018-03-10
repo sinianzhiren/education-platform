@@ -1,1 +1,1 @@
-# education-platform
+eduction client platform
